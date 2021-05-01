@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Waldmann-Spaziergang</title>
+        <meta name="description" content="Ein digital begleiteter Themenspaziergang durch das spätmittelalterliche Zürich.">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <link rel="icon" href="bilder/turm_icon.ico">
+        <meta name="viewport" content="with=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                
+                <div class="toptitleline"> 
+                    <h4>Karte</h4>
+                </div>
+                
+                <div class="burger" onclick="openNav()">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>                    
+                </div>
+
+                <div id="mySidenav" class="sidenav">
+                    <div>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-family:Verdana, Geneva, Tahoma, sans-serif;font-size: 34px;">&times;</a>
+                    </div>
+                <ul>
+                    <li><a href="index.html">START</a></li>
+                    <li><a href="karte.html">Karte</a></li>
+                    <li><a href="stationen.html">Stationen</a></li>
+                    <ul>
+                        <li><a href="zentralbibliothek.html">Zentralbibliothek</a></li>
+                        <li><a href="goeldliturm.html">Göldli-Turm</a></li>
+                        <li><a href="stuessihofstatt.html">Stüssihofstatt</a></li>
+                        <li><a href="schneggen.html">‹Schneggen›</a></li>
+                        <li><a href="rathaus.html">Rathaus</a></li>
+                        <li><a href="rathausbruecke.html">Rathausbücke / Gasthof ‹zum Schwert›</a></li>
+                        <li><a href="mugg.html">Haus ‹zur Mugg›</a></li>
+                        <li><a href="mannmond.html">Häuser ‹zum Roten Mann› und ‹zum Mond›</a></li>
+                        <li><a href="kaembel.html">Kämbel</a></li>
+                        <li><a href="einsiedleramtshaus.html">Einsiedler Amtshaus</a></li>
+                        <li><a href="fraumuenster1.html">Fraumünster I</a></li>
+                        <li><a href="fraumuenster2.html">Fraumünster II</a></li>
+                        <li><a href="waldmanndenkmal.html">Waldmann-Denkmal</a></li>
+                        <li><a href="wasserkirche.html">Wasserkriche</a></li>
+                        <li><a href="wellenberg.html">Wellenberg</a></li>
+                        <li><a href="sitkust.html">Haus ‹zum Sitkust›</a></li>
+                        <li><a href="erggel.html">Haus ‹zum steinernen Erggel›</a></li>
+                        <li><a href="waldmannstrasse.html">Waldmannstrasse / Hohe Promenade</a></li>
+                    </ul></a></li><br>
+                    <li><a href="literatur.html">Quellen und Literatur</a></li><br>
+                    <li><hr><a href="impressum.html">Impressum, Feedback</a></li>                      
+                </ul><br>
+                </div>
+               
+            </nav> 
+        </header>
+
+        <style>
+            #dvMap {
+              height: 700px;
+              width: 100%;
+            }
+
+        </style>
+          
+        <section id="navOpac">
+            <div id="dvMap"></div><br><br>
+        </section>
+
+        
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG2YaNRWuVvBYHJuPSSQuHUKWEP3bmCkA&map_ids=fd5c71518fc4b0c9&callback=initMap"></script>
+<script type="text/javascript">
+    var markers = [
+    {
+        "title": 'Zentralbibliothek',
+        "lat": '47.373999',
+        "lng": '8.545268',
+        "description": 'Burgunderkriege <p><a href="zentralbibliothek.html">Zentralbibliothek</a></p>'
+    },
+    {
+        "title": 'Goeldliturm',
+        "lat": '47.373098',
+        "lng": '8.543880',
+        "description": 'Waldmanns Gegner <p><a href="goeldliturm.html">Göldli-Turm</a></p>'
+    },
+    {
+        "title": 'Stuessihofstatt',
+        "lat": '47.372515',
+        "lng": '8.543730',
+        "description": 'Zürich und die Eidgenossenschaft <p><a href="stuessihofstatt.html">Stüssihofstatt</a></p>'
+    },
+    {
+        "title": 'Schneggen',
+        "lat": '47.372176',
+        "lng": '8.542999',
+        "description": 'Waldmanns Machtzirkel <p><a href="schneggen.html">Haus ‹zum Schneggen›</a></p>'
+    },
+    {
+        "title": 'Rathaus',
+        "lat": '47.371684',
+        "lng": '8.542723',
+        "description": 'Herrschaft – Stadt und Land <p><a href="rathaus.html">Rathaus</a></p>'
+    },
+    {
+        "title": 'Rathausbruecke',
+        "lat": '47.371750',
+        "lng": '8.542352',
+        "description": 'Aufstand und Sturz <p><a href="rathausbruecke.html">Rathausbrücke / Gasthaus ‹zum Schwert›</a></p>'
+    },
+    {
+        "title": 'Mugg',
+        "lat": '47.371781',
+        "lng": '8.540827',
+        "description": 'Familie... <p><a href="mugg.html">Haus ‹zur Mugg›</a></p>'
+    },
+    {
+        "title": 'MannMond',
+        "lat": '47.370639',
+        "lng": '8.541098',
+        "description": '... und Wohnstätten <p><a href="mannmond.html">Häuser ‹zum roten Mann› und ‹zum Mond›</a></p>'
+    },
+    {
+        "title": 'Kaembel',
+        "lat": '47.370252',
+        "lng": '8.541271',
+        "description": 'Waldmanns Aufstieg <p><a href="kaembel.html">Altes Zunfthaus ‹zur Kämbel›</a></p>'
+    },
+    {
+        "title": 'EinsiedlerAmtshaus',
+        "lat": '47.37008',
+        "lng": '8.54160',
+        "description": 'Waldmanns Einkünfte <p><a href="einsiedleramtshaus.html">Einsiedler Amtshaus</a></p>'
+    },
+    {
+        "title": 'Fraumuenster1',
+        "lat": '47.369888',
+        "lng": '8.541360',
+        "description": 'Votivbild <p><a href="fraumuenster1.html">Fraumünster (Portal Münstergasse)</a></p>'
+    },
+    {
+        "title": 'Fraumuenster2',
+        "lat": '47.36975',
+        "lng": '8.54080',
+        "description": 'Waldmanns Grab <p><a href="fraumuenster2.html">Fraumünster (linkes Querschiff)</a></p>'
+    },
+    {
+        "title": 'WaldmannDenkmal',
+        "lat": '47.369742',
+        "lng": '8.542035',
+        "description": 'Erinnerungskultur <p><a href="waldmanndenkmal.html">Waldmann-Denkmal</a></p>'
+    },
+    {
+        "title": 'Wasserkirche',
+        "lat": '47.369655',
+        "lng": '8.543223',
+        "description": 'Sittenmandate <p><a href="wasserkirche.html">Wasserkirche</a></p>'
+    },
+    {
+        "title": 'Wellenberg',
+        "lat": '47.368741',
+        "lng": '8.542829',
+        "description": 'Prozess und Urteil <p><a href="wellenberg.html">Wellenberg / Schifflände</a></p>'
+    },
+    {
+        "title": 'Waldmannstrasse',
+        "lat": '47.368301',
+        "lng": '8.546753',
+        "description": 'Richtstätte <p><a href="waldmannstrasse.html">Waldmannstrasse / Hohe Promenade</a></p>'
+    }
+    ];
+    window.onload = function () {
+        LoadMap();
+    }
+    function LoadMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(47.37063, 8.54372),
+            zoom: 15.7,
+            mapId: 'fd5c71518fc4b0c9',
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+ 
+        //Create and open InfoWindow.
+        var infoWindow = new google.maps.InfoWindow();
+ 
+        for (var i = 0; i < markers.length; i++) {
+            var data = markers[i];
+            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                icon: "bilder/location_on_black_full.svg",
+                title: data.title
+            });
+ 
+            //Attach click event to the marker.
+            (function (marker, data) {
+                google.maps.event.addListener(marker, "click", function (e) {
+                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                    infoWindow.setContent("<div style = 'width:115px;min-height:40px'>" + data.description + "</div>");
+                    infoWindow.open(map, marker);
+                });
+            })(marker, data);
+        }
+    }
+</script>
+
+        
+        <script src="app.js"></script>
+    </body>
+</html>
