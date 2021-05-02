@@ -43,7 +43,7 @@ img {
 }
 
 .start-button {
-  background-color: rgb(66, 65, 65, 255);
+  background-color: rgb(66, 65, 65);
   border: none;
   color: white;
   padding: 21px 0px;
@@ -57,7 +57,7 @@ img {
 }
 
 .start-button1 {
-  background-color: rgb(112, 105, 90, 255);
+  background-color: rgb(112, 105, 90);
 }
 
 .start-button:hover {
@@ -80,6 +80,28 @@ img {
 
 .literaturverzeichnis-button:hover {
   border: 1.3px solid rgb(26, 24, 24);
+  color: rgb(26, 24, 24);
+  background-color: rgb(250, 250, 250);
+}
+
+.feedback-button {
+  font-size: large;
+  text-align: center;
+  line-height: 2.4;
+  background-color: none;
+  border: 1.5px solid gray;
+  border-radius: 0%;
+  color: gray;
+  padding: 8px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  /*margin: 0px 26px;*/
+}
+
+.feedback-button:hover {
+  border: 1.5px solid rgb(26, 24, 24);
   color: rgb(26, 24, 24);
   background-color: rgb(250, 250, 250);
 }
@@ -143,7 +165,7 @@ nav {
   justify-content: space-between;
   padding: 0;
   align-items: center;
-  min-height: 8vh;
+  min-height: 12vh;
   background-color: none;
   font-family: "Pathway Gothic One", sans-serif;
 }
