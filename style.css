@@ -173,7 +173,7 @@ nav {
 .toptitleline {
   color: none; /*= Schriftfarbe*/
   text-transform: unset;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.6px;
   font-size: 21px;
   margin-top: auto;
   margin-bottom: auto;
