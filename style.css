@@ -145,8 +145,11 @@ img {
   margin: 4px 0px 18px 0px;
 }
 
-h1, h2, h3, h4 {
-  margin-top: 1.3em; 
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 1.3em;
   margin-bottom: 0.1em;
 }
 
@@ -221,7 +224,7 @@ nav {
 
 .sidenav .closebtn {
   position: absolute;
-  top: 8px;
+  top: 13px;
   right: 8%;
   font-size: 45px;
   margin-left: 50px;
