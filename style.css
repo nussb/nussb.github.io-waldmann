@@ -120,6 +120,17 @@ img {
   hyphens: auto;
 }
 
+.quellenbox {
+  background-color: rgb(223, 232, 238);
+  border: 0.1px solid transparent;
+  /*border: 1px solid gray;*/
+}
+
+.quellenbox p,
+.quellenbox h4 {
+  margin: 3%;
+}
+
 .literaturangaben {
   font-family: "Bitter";
   font-size: small;
